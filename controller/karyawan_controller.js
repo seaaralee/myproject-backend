@@ -57,7 +57,7 @@ exports.createAPI = async (req,res) => {
 exports.updateAPI = async (req,res) => {
     const id = req.params.id;
 
-    let kary = await Karyawan.findByPk(id);
+    let kary = await Karyawan.findById(id);
 
     if(!kary){
         return res.json({message: 'Data Not Found'});
